@@ -3,7 +3,7 @@ import { delay, motion } from "framer-motion";
 
 const Reveal = ({ children }) => {
   return (
-    <div className="relative w-fit overflow-hidden">
+    <div className="relative w-fit h-fit overflow-hidden">
       <motion.div variants={{
         hidden:{opacity:0,y:75},
         visible:{opacity:1,y:0},
