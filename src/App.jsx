@@ -1,12 +1,20 @@
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
+import HomeLayout from "./layouts/home";
+import AuthLayout from "./layouts/auth";
 
 function App() {
   return (
-    <div className="bg-red-200 w-full h-[200px] font-bold flex items-center justify-center">
-      <div className="bg-lime-300 text-black p-5 cursor-pointer">
-        Hello everyone !!
-      </div>
-    </div>
+    <Routes>
+      <Route path="home/*" element={<HomeLayout />} />
+      <Route path="auth/*" element={<AuthLayout />} />
+
+      {/* <Route path="dashboard/*" element={}/>
+      <Route path="recruiter/*" element={}/>
+      <Route path="admin/*" element={}/> */}
+
+      <Route path="/" element={<Navigate to="/home" replace />} />
+    </Routes>
   );
 }
 
