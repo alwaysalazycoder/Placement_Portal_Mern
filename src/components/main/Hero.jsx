@@ -34,7 +34,7 @@ const Hero = () => {
             x: "-100%",
             opacity: 0,
           }}
-          whileInView={{
+          whileInView={{  
             x: 0,
             opacity: 1,
             delay: 1,
